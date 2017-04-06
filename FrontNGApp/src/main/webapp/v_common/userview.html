@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Case</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">WebSiteName</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Blog <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/viewblogs">View Blog</a></li>
+						<li><a href="#/addblog">Post Blogs</a></li>
+						<li><a href="#/myblog">My Blogs</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Jobs <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/viewjobs">View Jobs</a></li>
+						<li><a href="#/viewappliedjobs">Applied Jobs</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Forum<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/viewforums">View Forums</a></li>
+						<li><a href="#/addforum">Post Forum</a></li>
+						<li><a href="#/myforum">My Forum</a></li>
+					</ul></li>
+				<li><a href="#/listmyfriends">Friends</a></li>
+				<li><a href="#/chat">Chat</a><span
+					class="glyphicon glyphicon-envelope"></span></li>
+				<li><a ng-hide="currentUser.useremail==undefined" href="#/home"
+					ng-click="ctrl.logoutuser()">Logout</a></li>
+				<li style="font-weight: bold; color: white;"
+					ng-show="currentUser.useremail!==undefined"><br /> <br />{{currentUser.useremail}}
+					: {{currentUser.currentrole}}</li>
+			</ul>
+		</div>
+	</nav>
